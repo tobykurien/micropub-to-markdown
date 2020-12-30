@@ -20,8 +20,8 @@ Author: Toby Kurien
     <input type="text" class="form-control" id="published" name="published">
   </div>
   <div class="form-group">
-    <label for="tags">Tags</label>
-    <input type="text" class="form-control" id="tags" name="tags" placeholder="comma-separated list">
+    <label for="category">Tags</label>
+    <input type="text" class="form-control" id="category" name="category" placeholder="comma-separated list">
   </div>
   <div class="form-group">
     <label for="photo1">Photo 1</label>
