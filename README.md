@@ -33,4 +33,4 @@ Finally, if you'd like to syndicate your content to Twitter/Mastodon/etc, load t
 
 # Example
 
-An example of a microblog using this: [https://tobykurien.com/category/microblog/]()
+An example of a microblog using this: [https://tobykurien.com/category/microblog/](https://tobykurien.com/category/microblog/)
