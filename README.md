@@ -9,9 +9,12 @@ The markdown front matter is using the format used by Pelican, but can be easily
 # Installation
 
 - Clone this repo to your hosting server
-- At the top of each file in `script` and also `src/micropub.php` there is a config section that will need to be edited to match your server paths, user, etc. Modify as needed (also the paths in `setup.sh`).
+- At the top of each file in `script` and also `src/micropub.php` there is a config section that will need to be edited to match your server paths, user, etc. Modify as needed. 
+    - `POSTS_ROOT` is the directory where new posts and images are uploaded to by the web server, e.g. `/home/user/posts/` 
+    - `CMS_ROOT` is the root of your checked out site source code, e.g. `/home/user/mysite/`, and posts are assumed to be in a `content` subfolder, and the generated output in an `output` subfolder.
+    - `WEB_ROOT` is where your static site is published and served from by the web server, e.g. `/var/www/site`
 - Run `scripts/setup.sh` to install the needed dependencies and create the directory where the uploaded files are stored.
-- Copy the files in `src` to the Pelican (or other generator) content folder. It should be set up to copy the php script into your web root.
+- Copy the files in `src` to the Pelican (or other generator) content folder.
 - Generate and publish your blog. If setup correctly, you can call `scripts/publish.sh` which will check for any new uploaded posts, import them, resize image and strip them of metadata, commit everything into git, generate your site, and then publish it back into your web root.
 - Run `nohup scripts/service.sh &` to watch for new uploads and trigger the publish routine.
 
