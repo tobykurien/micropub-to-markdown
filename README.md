@@ -30,7 +30,7 @@ You can also publish directly from your website by using a web browser, simply l
 If you'd like to syndicate your content to Twitter/Mastodon/etc, load the `syndicate-content` generated page and paste in the URL of your post and click the relevant button. For this to work, there are some pre-requisites:
 
 - You will need to have linked your Twitter/Mastodon account on [Brid.gy](https://brid.gy)
-- Your generated posts should be tagged with [IndieWeb](https://indieweb.org) [microformats2](https://indieweb.org/microformats2), specifically for [notes](https://indieweb.org/note)
+- Your generated posts should be tagged with [IndieWeb](https://indieweb.org) [microformats2](http://microformats.org/wiki/microformats2), specifically for [notes](https://indieweb.org/note)
 - Your generated posts should have this somewhere in the content (which can be setup in your article template) to allow brid.gy to cross-post your article:
 
 ```
