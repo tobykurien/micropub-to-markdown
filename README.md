@@ -15,7 +15,7 @@ The markdown front matter is using the format used by Pelican, but can be easily
     - `WEB_ROOT` is where your static site is published and served from by the web server, e.g. `/var/www/site`
 - Run `scripts/setup.sh` to install the needed dependencies and create the directory where the uploaded files are stored.
 - Copy the files in `src` to the Pelican (or other generator) content folder.
-- Generate and publish your blog. If setup correctly, you can call `scripts/publish.sh` which will check for any new uploaded posts, import them, resize image and strip them of metadata, commit everything into git, generate your site, and then publish it back into your web root.
+- Generate and publish your blog. If setup correctly, you can call `scripts/publish.sh` which will check for any new uploaded posts, import them, resize images and strip them of metadata, commit everything into git, generate your site, and then publish it back into your web root.
 - Run `nohup scripts/service.sh &` to watch for new uploads and trigger the publish routine.
 
 # Usage
@@ -24,7 +24,14 @@ Once installed, you can publish posts from your mobile device using [Indigenous]
 
 You can also publish directly from your website by using a web browser, simply load the `post-content` generated page, fill in the form and submit. A few seconds later your post should appear on your site if everything is setup correctly.
 
-Finally, if you'd like to syndicate your content to Twitter/Mastodon/etc, load the `syndicate-content` generated page and paste in the URL of your post and click the relevant button. You will need to have linked your Twitter/Mastodon account beforehand on [Brid.gy](https://brid.gy), and also make sure your generated posts have this somewhere in the content (which can be setup in your article template) to allow brid.gy to cross-post your article:
+
+## Syndication
+
+If you'd like to syndicate your content to Twitter/Mastodon/etc, load the `syndicate-content` generated page and paste in the URL of your post and click the relevant button. For this to work, there are some pre-requisites:
+
+- You will need to have linked your Twitter/Mastodon account on [Brid.gy](https://brid.gy)
+- Your generated posts should be tagged with [IndieWeb](https://indieweb.org) [microformats2](https://indieweb.org/microformats2), specifically for [notes](https://indieweb.org/note)
+- Your generated posts should have this somewhere in the content (which can be setup in your article template) to allow brid.gy to cross-post your article:
 
 ```
     <a href="https://brid.gy/publish/mastodon"></a>
